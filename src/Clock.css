@@ -1,0 +1,19 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-container__time {
+  font-size: 5rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
