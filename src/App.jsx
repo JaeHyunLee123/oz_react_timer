@@ -28,7 +28,9 @@ function App() {
   return (
     <>
       <div className="container">
-        <button onClick={handleComponentToggle}>Show</button>
+        <button className={`${componentRunning ? 'red' : 'green'}`} onClick={handleComponentToggle}>
+          {componentRunning ? '컴포넌트 정지' : '컴포넌트 시작'}
+        </button>
         {componentRunning ? <Clock /> : null}
       </div>
     </>
