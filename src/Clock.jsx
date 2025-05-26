@@ -30,13 +30,14 @@ function Clock() {
   }, [isOn]);
   return (
     <div className="timer-container">
-      <span>{`${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}:${String(
-        time.getSeconds()
-      ).padStart(2, '0')}`}</span>
+      <span className="timer-container__time">{`${String(time.getHours()).padStart(2, '0')}:${String(
+        time.getMinutes()
+      ).padStart(2, '0')}:${String(time.getSeconds()).padStart(2, '0')}`}</span>
       <button
         onClick={() => {
           setIsOn((prev) => !prev);
         }}
+        className={`${isOn ? 'red' : 'green'}`}
       >
         {isOn ? '타이머 정지' : '타이머 시작'}
       </button>
